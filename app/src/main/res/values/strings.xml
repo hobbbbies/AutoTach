@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">ObdReader</string>
     <string name="hello_world">Hello World!</string>
+    <string name="discovered_device">Device #</string>
 </resources>
