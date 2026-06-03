@@ -1,11 +1,17 @@
 package com.example.obdreader.ui
 
+import android.Manifest
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.annotation.RequiresPermission
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import com.example.obdreader.databinding.ActivityMainBinding
 import com.example.obdreader.viewmodel.ObdViewModel
 import com.example.obdreader.ui.MainFragment
@@ -17,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: ObdViewModel by viewModels()
 
+    @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -25,6 +32,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         navigate(ObdViewModel.Screen.CONNECT)
 //        checkBluetoothStatus()
+
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.chosenDevice.collect { device ->
+                    if (device != null) {
+                        Log.i(TAG, "Device chosen: ${device.name ?: device.address}")
+                        // For example, navigate to MAIN once a device is chosen
+                        navigate(ObdViewModel.Screen.MAIN)
+                    }
+                }
+            }
+        }
     }
 
     private fun checkBluetoothStatus() {
@@ -55,4 +74,6 @@ class MainActivity : AppCompatActivity() {
             .setReorderingAllowed(true)
             .commit()
     }
+
+
 }
