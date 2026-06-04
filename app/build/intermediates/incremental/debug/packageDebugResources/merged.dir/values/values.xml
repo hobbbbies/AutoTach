@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="Primary">#a0dafa</color>
-    <string name="app_name">ObdReader</string>
-    <string name="discovered_device">Device #</string>
-    <string name="hello_world">Hello World!</string>
-    <string name="pair_text">Choose a device to pair</string>
-    <style name="Theme.ObdReader" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
-</resources>

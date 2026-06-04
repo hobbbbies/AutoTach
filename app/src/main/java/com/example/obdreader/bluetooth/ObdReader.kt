@@ -3,10 +3,13 @@ package com.example.obdreader.bluetooth
 import android.Manifest
 import android.bluetooth.BluetoothDevice
 import android.content.Context
+import android.util.Log
 import androidx.annotation.RequiresPermission
 import com.example.obdreader.interfaces.IObdReader
 import kotlinx.coroutines.flow.StateFlow
 import java.io.IOException
+
+private const val TAG = "ObdReader"
 
 private sealed class ObdResponse {
     data class Bytes(val data: ByteArray) : ObdResponse()
@@ -56,14 +59,19 @@ class ObdReader(context: Context, device: BluetoothDevice) : IObdReader {
 
     private suspend fun queryBytes(cmd: String, minBytes: Int): ByteArray {
         val raw = communicator.sendCommand(cmd)
+        Log.d(TAG, "$cmd raw: ${raw.replace("\r", "\\r")}")
         return when (val parsed = parseResponse(cmd, raw)) {
             is ObdResponse.Bytes -> {
+                Log.i(TAG, "$cmd parsed: ${parsed.data.joinToString(" ") { "%02X".format(it) }}")
                 if (parsed.data.size < minBytes) {
                     throw IOException("$cmd: short response, got ${parsed.data.size} bytes, expected >= $minBytes")
                 }
                 parsed.data
             }
-            is ObdResponse.Error -> throw IOException("$cmd: ${parsed.reason}")
+            is ObdResponse.Error -> {
+                Log.w(TAG, "$cmd parse error: ${parsed.reason}")
+                throw IOException("$cmd: ${parsed.reason}")
+            }
         }
     }
 

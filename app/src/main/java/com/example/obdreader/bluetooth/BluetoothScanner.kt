@@ -6,7 +6,10 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
 import android.bluetooth.le.ScanCallback
+import android.bluetooth.le.ScanFilter
 import android.bluetooth.le.ScanResult
+import android.bluetooth.le.ScanSettings
+import android.os.ParcelUuid
 import android.util.Log
 import androidx.annotation.RequiresPermission
 import kotlinx.coroutines.CoroutineScope
@@ -15,8 +18,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import java.util.UUID
 
 private const val TAG="BluetoothScanner"
+
+private val SPP_SERVICE_UUID: UUID = UUID.fromString("000018f0-0000-1000-8000-00805f9b34fb")
 class BluetoothScanner(private val application: Application, private val scope: CoroutineScope) {
 
     private val bluetoothManager: BluetoothManager? =
@@ -59,8 +65,19 @@ class BluetoothScanner(private val application: Application, private val scope: 
         if (adapter == null || !adapter.isEnabled || bluetoothLeScanner == null) {
             return
         }
-        
+
         if (!scanning) {
+            _devices.value = emptySet()
+
+            val filters = listOf(
+                ScanFilter.Builder()
+                    .setServiceUuid(ParcelUuid(SPP_SERVICE_UUID))
+                    .build()
+            )
+            val settings = ScanSettings.Builder()
+                .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY)
+                .build()
+
             scope.launch {
                 delay(SCAN_PERIOD)
                 if (scanning) {
@@ -68,7 +85,7 @@ class BluetoothScanner(private val application: Application, private val scope: 
                 }
             }
             scanning = true
-            bluetoothLeScanner.startScan(leScanCallback)
+            bluetoothLeScanner.startScan(/*filters, settings, */leScanCallback)
         }
     }
 

@@ -3,6 +3,8 @@ package com.example.obdreader.ui
 import android.Manifest
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.RequiresPermission
 import androidx.fragment.app.Fragment
@@ -19,12 +21,31 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private val viewModel: ObdViewModel by activityViewModels()
 
     @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val tvTitle: TextView? = view?.findViewById<TextView>(R.id.tvTitle)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
+        val tvRpm = view.findViewById<TextView>(R.id.tvRpm)
+        val btnConnect = view.findViewById<Button>(R.id.btnConnect)
+        val btnPair = view.findViewById<Button>(R.id.btnPair)
 
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
+        btnConnect.setOnClickListener {
+            viewModel.navigateTo(ObdViewModel.Screen.CONNECT)
+        }
+
+        btnPair.setOnClickListener {
+
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.rpm.collect { rpm ->
+                    tvRpm.text = if (rpm == null) "-- rpm" else "${rpm.toInt()} rpm"
+                }
+            }
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.chosenDevice.collect { device ->
                     if (device != null) {
                         Log.i(TAG, "Device chosen: ${device.name ?: device.address}")

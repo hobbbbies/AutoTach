@@ -30,16 +30,22 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "onCreate: Created MainActivity")
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        navigate(ObdViewModel.Screen.CONNECT)
 //        checkBluetoothStatus()
+
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.screen.collect { screen ->
+                    navigate(screen)
+                }
+            }
+        }
 
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.chosenDevice.collect { device ->
                     if (device != null) {
                         Log.i(TAG, "Device chosen: ${device.name ?: device.address}")
-                        // For example, navigate to MAIN once a device is chosen
-                        navigate(ObdViewModel.Screen.MAIN)
+                        viewModel.navigateTo(ObdViewModel.Screen.MAIN)
                     }
                 }
             }

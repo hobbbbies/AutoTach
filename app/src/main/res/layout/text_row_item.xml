@@ -6,6 +6,8 @@
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp"
     android:background="@drawable/bg_row_item"
+    android:clickable="true"
+    android:focusable="true"
     android:padding="12dp">
 
     <TextView
@@ -17,8 +19,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:clickable="true"
-        android:focusable="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

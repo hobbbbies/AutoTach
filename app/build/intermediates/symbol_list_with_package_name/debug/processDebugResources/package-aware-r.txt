@@ -3192,6 +3192,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnConnect
+id btnPair
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3576,6 +3578,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvName
+id tvRpm
 id tvTitle
 id unchecked
 id uniform

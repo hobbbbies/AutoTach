@@ -27,9 +27,9 @@ enum class ConnectionState { DISCONNECTED, CONNECTING, LINK_UP, READY }
 
 private const val TAG = "BluetoothCommunicator"
 
-private val SERVICE_UUID = UUID.fromString("0000fff0-0000-1000-8000-00805f9b34fb")
-private val NOTIFY_UUID  = UUID.fromString("0000fff1-0000-1000-8000-00805f9b34fb")
-private val WRITE_UUID   = UUID.fromString("0000fff2-0000-1000-8000-00805f9b34fb")
+private val SERVICE_UUID = UUID.fromString("000018f0-0000-1000-8000-00805f9b34fb")
+private val NOTIFY_UUID  = UUID.fromString("00002af0-0000-1000-8000-00805f9b34fb")
+private val WRITE_UUID   = UUID.fromString("00002af1-0000-1000-8000-00805f9b34fb")
 private val CCCD_UUID    = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb")
 
 private val INIT_SEQUENCE = listOf("ATZ", "ATE0", "ATL0", "ATS0", "ATH0", "ATSP0", "0100")
@@ -71,13 +71,13 @@ class BluetoothCommunicator(
             logServiceTree(gatt)
             val service = gatt.getService(SERVICE_UUID)
             if (service == null) {
-                Log.e(TAG, "FFF0 service not found")
+                Log.e(TAG, "Service $SERVICE_UUID not found")
                 return
             }
             val notifyChar = service.getCharacteristic(NOTIFY_UUID)
             val wChar = service.getCharacteristic(WRITE_UUID)
             if (notifyChar == null || wChar == null) {
-                Log.e(TAG, "FFF1/FFF2 characteristics not found")
+                Log.e(TAG, "Notify/write characteristics not found in $SERVICE_UUID")
                 return
             }
             wChar.writeType =
@@ -109,10 +109,12 @@ class BluetoothCommunicator(
             characteristic: BluetoothGattCharacteristic,
         ) {
             val chunk = String(characteristic.value, Charsets.US_ASCII)
+            Log.d(TAG, "RX chunk: ${chunk.replace("\r", "\\r")}")
             responseBuffer.append(chunk)
             if (responseBuffer.contains('>')) {
-                val response = responseBuffer.substringBefore('>').trim()
+                val response = responseBuffer.toString().substringBefore('>').trim()
                 responseBuffer.clear()
+                Log.i(TAG, "RX: ${response.replace("\r", "\\r")}")
                 responses.trySend(response)
             }
         }
@@ -160,6 +162,7 @@ class BluetoothCommunicator(
     @Suppress("DEPRECATION")
     override suspend fun sendCommand(cmd: String): String {
         val char = writeChar ?: error("Write characteristic not available")
+        Log.i(TAG, "TX: $cmd")
         char.value = (cmd + "\r").toByteArray(Charsets.US_ASCII)
         gatt?.writeCharacteristic(char)
         return responses.receive()
@@ -169,7 +172,7 @@ class BluetoothCommunicator(
     override fun connect() {
         Log.i(TAG, "Connecting to ${device.address}")
         _state.value = ConnectionState.CONNECTING
-        gatt = device.connectGatt(context, false, gattCallback)
+        gatt = device.connectGatt(context, false, gattCallback, BluetoothDevice.TRANSPORT_LE)
     }
 
     @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)

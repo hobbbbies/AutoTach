@@ -2,9 +2,12 @@ R_DEF: Internal format may change without notice
 local
 color Primary
 drawable bg_row_item
+id btnConnect
+id btnPair
 id host
 id rvDevices
 id tvName
+id tvRpm
 id tvTitle
 layout activity_main
 layout fragment_connect
