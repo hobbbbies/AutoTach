@@ -49,4 +49,5 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
     implementation("androidx.fragment:fragment-ktx:1.8.9")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.car.app:app:1.4.0")
 }
