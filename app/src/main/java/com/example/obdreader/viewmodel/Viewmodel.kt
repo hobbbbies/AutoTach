@@ -6,8 +6,12 @@ import android.bluetooth.BluetoothDevice
 import androidx.annotation.RequiresPermission
 import androidx.lifecycle.AndroidViewModel
 import com.example.obdreader.ObdReaderApp
+import com.example.obdreader.data.ObdRepository
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.receiveAsFlow
 
 class ObdViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -18,6 +22,7 @@ class ObdViewModel(application: Application) : AndroidViewModel(application) {
     private val _screen = MutableStateFlow(Screen.CONNECT)
     val screen: StateFlow<Screen> = _screen
 
+    val errors: Flow<String> = repo.errors
     val devices = repo.devices
     val chosenDevice = repo.chosenDevice
     val rpm = repo.rpm
@@ -33,5 +38,15 @@ class ObdViewModel(application: Application) : AndroidViewModel(application) {
 
     fun navigateTo(screen: Screen) {
         _screen.value = screen
+    }
+
+    @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
+    fun connect() {
+        repo.connect()
+    }
+
+    @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
+    fun disconnect() {
+        repo.disconnect()
     }
 }

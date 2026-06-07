@@ -21,10 +21,22 @@
     <uses-permission
         android:name="android.permission.BLUETOOTH_SCAN"
         android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="androidx.car.app.ACCESS_SURFACE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"
         android:required="true" />
+
+    <queries>
+        <intent>
+            <action android:name="androidx.car.app.CarAppService" />
+        </intent>
+
+        <provider
+            android:name="androidx.car.app.connection.provider"
+            android:authorities="androidx.car.app.connection" />
+    </queries>
 
     <permission
         android:name="com.example.obdreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -33,6 +45,7 @@
     <uses-permission android:name="com.example.obdreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="com.example.obdreader.ObdReaderApp"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -41,6 +54,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.ObdReader" >
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+        <meta-data
+            android:name="androidx.car.app.minCarApiLevel"
+            android:value="1" />
+
         <activity
             android:name="com.example.obdreader.ui.MainActivity"
             android:exported="true" >
@@ -50,6 +70,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="com.example.obdreader.car.ObdCarAppService"
+            android:exported="true"
+            android:foregroundServiceType="connectedDevice" >
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService" />
+
+                <category android:name="androidx.car.app.category.IOT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="androidx.car.app.CarAppPermissionActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="androidx.car.app.notification.CarAppNotificationBroadcastReceiver"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

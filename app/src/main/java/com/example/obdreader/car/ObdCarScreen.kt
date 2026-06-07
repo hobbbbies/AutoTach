@@ -52,7 +52,7 @@ class ObdCarScreen(carContext: CarContext) : Screen(carContext), DefaultLifecycl
             .build()
 
         return PaneTemplate.Builder(pane)
-            .setTitle(CarText.create("OBD"))
+            .setTitle(CarText.create("OBD").toCharSequence())
             .build()
     }
 }

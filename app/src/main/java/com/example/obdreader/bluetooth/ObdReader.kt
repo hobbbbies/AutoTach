@@ -8,6 +8,7 @@ import androidx.annotation.RequiresPermission
 import com.example.obdreader.interfaces.IObdReader
 import kotlinx.coroutines.flow.StateFlow
 import java.io.IOException
+import com.example.obdreader.BuildConfig
 
 private const val TAG = "ObdReader"
 
@@ -35,10 +36,12 @@ class ObdReader(context: Context, device: BluetoothDevice) : IObdReader {
 
     private val communicator = BluetoothCommunicator(context, device)
 
-    val state: StateFlow<ConnectionState> get() = communicator.state
+    override val state: StateFlow<ConnectionState> get() = communicator.state
 
     @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
-    override fun connect() = communicator.connect()
+    override fun connect() {
+        communicator.connect()
+    }
 
     @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
     override fun disconnect() = communicator.disconnect()

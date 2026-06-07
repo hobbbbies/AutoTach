@@ -16,7 +16,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("boolean", "MOCK_BLUETOOTH", "true")
+        }
         release {
+            buildConfigField("boolean", "MOCK_BLUETOOTH", "true")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -36,6 +40,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 

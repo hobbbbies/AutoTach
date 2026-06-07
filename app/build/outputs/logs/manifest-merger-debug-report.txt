@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
 MERGED from [androidx.databinding:viewbinding:8.7.3] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/d84216d10d8099d4ee7b55fcfdf33f6e/transformed/viewbinding-8.7.3/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/e00582d78a07bb95179ae930d6b68406/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5aca2b145bc2a1f6240569c6bca1d233/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -13,6 +13,7 @@ MERGED from [androidx.recyclerview:recyclerview:1.4.0] /Users/stefanvitanov/.gra
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/2b74354317d7630390af123a464b21db/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.8.9] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/1e9074db61390826eb3c78e7973f6b4f/transformed/fragment-1.8.9/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment-ktx:1.8.9] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/0faa313ef9385267ded6f5033d92b8aa/transformed/fragment-ktx-1.8.9/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:17:1-41:12
 MERGED from [androidx.activity:activity:1.9.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/19ee55a24fb5dd6ca11640ae7f990ea9/transformed/activity-1.9.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/76b1117f9d1a31bf57dd6f531bdba8d7/transformed/activity-ktx-1.9.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/e7a44cc263fa16a25a68469dacb37eea/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
@@ -23,6 +24,7 @@ MERGED from [androidx.transition:transition:1.5.0] /Users/stefanvitanov/.gradle/
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/7dc2fd666e21cc1a6c59f2d7378188f7/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/48ded683a6e4d16623df4301e3dfa861/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5efc18e15bdb9edcbb47d6e332434a76/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.6.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/042f8b0aafd26a9acc23a67cd8493c08/transformed/media-1.6.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/eebf10746c05ae157da7d3c7b0f8bb39/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/886779c7726d57f5eacf251fe716216f/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/37ddd85a92b9ba3ec6848596f2eb6db0/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -90,19 +92,39 @@ ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/m
 		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:15:9-55
 	android:name
 		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:14:9-57
-uses-feature#android.hardware.bluetooth_le
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:16:5-18:35
-	android:required
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:9-32
+uses-permission#androidx.car.app.ACCESS_SURFACE
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:16:5-71
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:9-53
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:16:22-68
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:5-77
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:22-74
+uses-feature#android.hardware.bluetooth_le
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:5-20:35
+	android:required
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:20:9-32
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:19:9-53
+queries
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:22:5-26:15
+MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:23:5-28:15
+MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:23:5-28:15
+intent#action:name:androidx.car.app.CarAppService
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:23:9-25:18
+action#androidx.car.app.CarAppService
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:13-69
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:21-66
 application
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:20:5-33:19
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:20:5-33:19
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:28:5-60:19
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:28:5-60:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/e00582d78a07bb95179ae930d6b68406/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/e00582d78a07bb95179ae930d6b68406/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5aca2b145bc2a1f6240569c6bca1d233/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5aca2b145bc2a1f6240569c6bca1d233/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:30:5-39:19
+MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:30:5-39:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/11364a8f1d49f28099b6d6e45db0f403/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/11364a8f1d49f28099b6d6e45db0f403/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
@@ -120,29 +142,57 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/stefanvitanov/.gradl
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:23:9-35
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:32:9-35
 	android:label
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:22:9-41
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:31:9-41
 	android:allowBackup
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:30:9-35
 	android:theme
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:9-47
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:33:9-47
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:9-37
+meta-data#com.google.android.gms.car.application
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:35:9-37:59
+	android:resource
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:37:13-56
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:36:13-66
+meta-data#androidx.car.app.minCarApiLevel
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:38:9-40:33
+	android:value
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:40:13-30
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:39:13-59
 activity#com.example.obdreader.ui.MainActivity
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:25:9-32:20
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:42:9-49:20
 	android:exported
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:27:13-36
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:44:13-36
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:26:13-44
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:43:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:28:13-31:29
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:45:13-48:29
 action#android.intent.action.MAIN
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:17-69
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:17-69
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:25-66
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:27-74
+service#com.example.obdreader.car.ObdCarAppService
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:51:9-59:19
+	android:exported
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:53:13-36
+	android:foregroundServiceType
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:54:13-60
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:52:13-49
+intent-filter#action:name:androidx.car.app.CarAppService+category:name:androidx.car.app.category.IOT
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:55:13-58:29
+category#androidx.car.app.category.IOT
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:57:17-74
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:57:27-71
 uses-sdk
 INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml
@@ -165,6 +215,8 @@ MERGED from [androidx.fragment:fragment:1.8.9] /Users/stefanvitanov/.gradle/cach
 MERGED from [androidx.fragment:fragment:1.8.9] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/1e9074db61390826eb3c78e7973f6b4f/transformed/fragment-1.8.9/AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment-ktx:1.8.9] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/0faa313ef9385267ded6f5033d92b8aa/transformed/fragment-ktx-1.8.9/AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment-ktx:1.8.9] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/0faa313ef9385267ded6f5033d92b8aa/transformed/fragment-ktx-1.8.9/AndroidManifest.xml:5:5-44
+MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.activity:activity:1.9.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/19ee55a24fb5dd6ca11640ae7f990ea9/transformed/activity-1.9.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.9.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/19ee55a24fb5dd6ca11640ae7f990ea9/transformed/activity-1.9.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/76b1117f9d1a31bf57dd6f531bdba8d7/transformed/activity-ktx-1.9.1/AndroidManifest.xml:5:5-44
@@ -185,6 +237,8 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/stefa
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/48ded683a6e4d16623df4301e3dfa861/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5efc18e15bdb9edcbb47d6e332434a76/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5efc18e15bdb9edcbb47d6e332434a76/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/042f8b0aafd26a9acc23a67cd8493c08/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/042f8b0aafd26a9acc23a67cd8493c08/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/eebf10746c05ae157da7d3c7b0f8bb39/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/eebf10746c05ae157da7d3c7b0f8bb39/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.1.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/886779c7726d57f5eacf251fe716216f/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -251,6 +305,28 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/stefanvitanov/.gradle
 		INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml
+provider#androidx.car.app.connection.provider
+ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:24:9-27:43
+	android:authorities
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:26:13-62
+	tools:ignore
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:27:13-40
+	android:name
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:25:13-64
+activity#androidx.car.app.CarAppPermissionActivity
+ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:31:9-34:75
+	android:exported
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:33:13-37
+	android:theme
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:32:13-69
+receiver#androidx.car.app.notification.CarAppNotificationBroadcastReceiver
+ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:37:13-93
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/11364a8f1d49f28099b6d6e45db0f403/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/bc992fe8802deed4e8d8238ebdfb2637/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:24:9-32:20

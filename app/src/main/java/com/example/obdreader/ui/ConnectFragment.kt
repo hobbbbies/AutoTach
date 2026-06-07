@@ -1,10 +1,12 @@
 package com.example.obdreader.ui
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity.RESULT_OK
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.tv.TvView
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -38,6 +40,7 @@ class ConnectFragment : Fragment(R.layout.fragment_connect) {
         }
     }
 
+    @SuppressLint("MissingPermission")
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions(),
     ) { results ->
@@ -53,8 +56,10 @@ class ConnectFragment : Fragment(R.layout.fragment_connect) {
         }
     }
 
+    @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.disconnect()
 
         val rvDevices = view.findViewById<RecyclerView>(R.id.rvDevices)
 

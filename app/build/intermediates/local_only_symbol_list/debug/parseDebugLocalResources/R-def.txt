@@ -18,3 +18,4 @@ string discovered_device
 string hello_world
 string pair_text
 style Theme.ObdReader
+xml automotive_app_desc

@@ -1,22 +1,18 @@
 [
     {
-        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-mergeDebugResources-37:/layout/fragment_main.xml",
-        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-40:/layout/fragment_main.xml"
+        "merged": "com.example.obdreader.app-mergeDebugResources-39:/layout/fragment_connect.xml",
+        "source": "com.example.obdreader.app-main-42:/layout/fragment_connect.xml"
     },
     {
-        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-mergeDebugResources-37:/layout/fragment_connect.xml",
-        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-40:/layout/fragment_connect.xml"
+        "merged": "com.example.obdreader.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "com.example.obdreader.app-main-42:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-mergeDebugResources-37:/layout/text_row_item.xml",
-        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-40:/layout/text_row_item.xml"
+        "merged": "com.example.obdreader.app-mergeDebugResources-39:/layout/text_row_item.xml",
+        "source": "com.example.obdreader.app-main-42:/layout/text_row_item.xml"
     },
     {
-        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-mergeDebugResources-37:/layout/activity_main.xml",
-        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-40:/layout/activity_main.xml"
-    },
-    {
-        "merged": "com.example.obdreader.app-mergeDebugResources-37:/layout/fragment_main.xml",
-        "source": "com.example.obdreader.app-main-40:/layout/fragment_main.xml"
+        "merged": "com.example.obdreader.app-mergeDebugResources-39:/layout/fragment_main.xml",
+        "source": "com.example.obdreader.app-main-42:/layout/fragment_main.xml"
     }
 ]

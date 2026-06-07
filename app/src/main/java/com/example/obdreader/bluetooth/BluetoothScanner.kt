@@ -103,7 +103,7 @@ class BluetoothScanner(private val application: Application, private val scope: 
     val isBluetoothEnabled: Boolean
         get() = bluetoothAdapter?.isEnabled ?: false
 
-    fun setChosenDevice(device: BluetoothDevice) {
+    fun setChosenDevice(device: BluetoothDevice?) {
         Log.i(TAG, "setChosenDevice: Setting chosen device to $device.name")
         _chosenDevice.value = device
     }

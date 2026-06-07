@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.obdreader.app-mergeDebugResources-36:/values-ru/values-ru.xml",
+            "outputFile": "com.example.obdreader.app-mergeDebugResources-38:/values-ru/values-ru.xml",
             "map": [
                 {
                     "source": "/Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/res/values-ru/values-ru.xml",
