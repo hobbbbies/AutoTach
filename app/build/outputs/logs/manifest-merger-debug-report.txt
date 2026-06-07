@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.databinding:viewbinding:8.7.3] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/d84216d10d8099d4ee7b55fcfdf33f6e/transformed/viewbinding-8.7.3/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/e00582d78a07bb95179ae930d6b68406/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5aca2b145bc2a1f6240569c6bca1d233/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -96,29 +96,33 @@ uses-permission#androidx.car.app.ACCESS_SURFACE
 ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:16:5-71
 	android:name
 		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:16:22-68
-uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:5-77
+uses-permission#androidx.car.app.NAVIGATION_TEMPLATES
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:5-76
 	android:name
 		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:22-74
-uses-feature#android.hardware.bluetooth_le
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:5-20:35
-	android:required
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:20:9-32
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:5-77
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:19:9-53
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:22-74
+uses-feature#android.hardware.bluetooth_le
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:19:5-21:35
+	android:required
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:21:9-32
+	android:name
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:20:9-53
 queries
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:22:5-26:15
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:23:5-27:15
 MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:23:5-28:15
 MERGED from [androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:23:5-28:15
 intent#action:name:androidx.car.app.CarAppService
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:23:9-25:18
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:9-26:18
 action#androidx.car.app.CarAppService
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:13-69
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:25:13-69
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:21-66
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:25:21-66
 application
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:28:5-60:19
-INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:28:5-60:19
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:5-61:19
+INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:5-61:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/e00582d78a07bb95179ae930d6b68406/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/e00582d78a07bb95179ae930d6b68406/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5aca2b145bc2a1f6240569c6bca1d233/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -142,57 +146,55 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/stefanvitanov/.gradl
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:32:9-35
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:33:9-35
 	android:label
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:31:9-41
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:32:9-41
 	android:allowBackup
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:30:9-35
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:31:9-35
 	android:theme
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:33:9-47
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:34:9-47
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:9-37
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:30:9-37
 meta-data#com.google.android.gms.car.application
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:35:9-37:59
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:36:9-38:59
 	android:resource
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:37:13-56
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:38:13-56
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:36:13-66
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:37:13-66
 meta-data#androidx.car.app.minCarApiLevel
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:38:9-40:33
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:39:9-41:33
 	android:value
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:40:13-30
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:41:13-30
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:39:13-59
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:40:13-59
 activity#com.example.obdreader.ui.MainActivity
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:42:9-49:20
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:43:9-50:20
 	android:exported
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:44:13-36
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:45:13-36
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:43:13-44
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:44:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:45:13-48:29
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:13-49:29
 action#android.intent.action.MAIN
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:17-69
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:17-69
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:25-66
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:17-77
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:48:17-77
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:27-74
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:48:27-74
 service#com.example.obdreader.car.ObdCarAppService
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:51:9-59:19
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:52:9-60:19
 	android:exported
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:53:13-36
-	android:foregroundServiceType
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:54:13-60
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:54:13-36
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:52:13-49
-intent-filter#action:name:androidx.car.app.CarAppService+category:name:androidx.car.app.category.IOT
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:55:13-58:29
-category#androidx.car.app.category.IOT
-ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:57:17-74
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:53:13-49
+intent-filter#action:name:androidx.car.app.CarAppService+category:name:androidx.car.app.category.NAVIGATION
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:56:13-59:29
+category#androidx.car.app.category.NAVIGATION
+ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:58:17-81
 	android:name
-		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:57:27-71
+		ADDED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:58:27-78
 uses-sdk
 INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml

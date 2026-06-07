@@ -1,26 +1,30 @@
 [
     {
+        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-debug-40:/layout_fragment_connect.xml.flat",
+        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-42:/layout/fragment_connect.xml"
+    },
+    {
         "merged": "com.example.obdreader.app-debug-40:/layout_fragment_main.xml.flat",
         "source": "com.example.obdreader.app-main-42:/layout/fragment_main.xml"
     },
     {
-        "merged": "com.example.obdreader.app-debug-40:/layout_fragment_connect.xml.flat",
-        "source": "com.example.obdreader.app-main-42:/layout/fragment_connect.xml"
+        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-debug-40:/layout_activity_main.xml.flat",
+        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-42:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.obdreader.app-debug-40:/layout_text_row_item.xml.flat",
-        "source": "com.example.obdreader.app-main-42:/layout/text_row_item.xml"
+        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-debug-40:/xml_automotive_app_desc.xml.flat",
+        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-42:/xml/automotive_app_desc.xml"
     },
     {
-        "merged": "com.example.obdreader.app-debug-40:/drawable_bg_row_item.xml.flat",
-        "source": "com.example.obdreader.app-main-42:/drawable/bg_row_item.xml"
+        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-debug-40:/layout_text_row_item.xml.flat",
+        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-42:/layout/text_row_item.xml"
     },
     {
-        "merged": "com.example.obdreader.app-debug-40:/layout_activity_main.xml.flat",
-        "source": "com.example.obdreader.app-main-42:/layout/activity_main.xml"
+        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-debug-40:/drawable_bg_row_item.xml.flat",
+        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-42:/drawable/bg_row_item.xml"
     },
     {
-        "merged": "com.example.obdreader.app-debug-40:/xml_automotive_app_desc.xml.flat",
-        "source": "com.example.obdreader.app-main-42:/xml/automotive_app_desc.xml"
+        "merged": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-debug-40:/layout_fragment_main.xml.flat",
+        "source": "/Users/stefanvitanov/.gradle/daemon/8.10.2/com.example.obdreader.app-main-42:/layout/fragment_main.xml"
     }
 ]

@@ -38,110 +38,111 @@
 24    <uses-permission android:name="androidx.car.app.ACCESS_SURFACE" />
 24-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:16:5-71
 24-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:16:22-68
-25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-25-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:5-77
+25    <uses-permission android:name="androidx.car.app.NAVIGATION_TEMPLATES" />
+25-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:5-76
 25-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:17:22-74
-26
-27    <uses-feature
-27-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:5-20:35
-28        android:name="android.hardware.bluetooth_le"
-28-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:19:9-53
-29        android:required="true" />
-29-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:20:9-32
-30
-31    <queries>
-31-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:22:5-26:15
-32        <intent>
-32-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:23:9-25:18
-33            <action android:name="androidx.car.app.CarAppService" />
-33-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:13-69
-33-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:21-66
-34        </intent>
-35
-36        <provider
-36-->[androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:24:9-27:43
-37            android:name="androidx.car.app.connection.provider"
-37-->[androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:25:13-64
-38            android:authorities="androidx.car.app.connection" />
-38-->[androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:26:13-62
-39    </queries>
-40
-41    <permission
-41-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
-42        android:name="com.example.obdreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-42-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
-43        android:protectionLevel="signature" />
-43-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
-44
-45    <uses-permission android:name="com.example.obdreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-45-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
-45-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
-46
-47    <application
-47-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:28:5-60:19
-48        android:name="com.example.obdreader.ObdReaderApp"
-48-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:9-37
-49        android:allowBackup="true"
-49-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:30:9-35
-50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-50-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
-51        android:debuggable="true"
-52        android:extractNativeLibs="false"
-53        android:label="@string/app_name"
-53-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:31:9-41
-54        android:supportsRtl="true"
-54-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:32:9-35
-55        android:testOnly="true"
-56        android:theme="@style/Theme.ObdReader" >
-56-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:33:9-47
-57        <meta-data
-57-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:35:9-37:59
-58            android:name="com.google.android.gms.car.application"
-58-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:36:13-66
-59            android:resource="@xml/automotive_app_desc" />
-59-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:37:13-56
-60        <meta-data
-60-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:38:9-40:33
-61            android:name="androidx.car.app.minCarApiLevel"
-61-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:39:13-59
-62            android:value="1" />
-62-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:40:13-30
-63
-64        <activity
-64-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:42:9-49:20
-65            android:name="com.example.obdreader.ui.MainActivity"
-65-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:43:13-44
-66            android:exported="true" >
-66-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:44:13-36
-67            <intent-filter>
-67-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:45:13-48:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:17-69
-68-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:25-66
-69
-70                <category android:name="android.intent.category.LAUNCHER" />
-70-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:17-77
-70-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:27-74
-71            </intent-filter>
-72        </activity>
-73
-74        <service
-74-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:51:9-59:19
-75            android:name="com.example.obdreader.car.ObdCarAppService"
-75-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:52:13-49
-76            android:exported="true"
-76-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:53:13-36
-77            android:foregroundServiceType="connectedDevice" >
-77-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:54:13-60
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+26-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:5-77
+26-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:18:22-74
+27
+28    <uses-feature
+28-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:19:5-21:35
+29        android:name="android.hardware.bluetooth_le"
+29-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:20:9-53
+30        android:required="true" />
+30-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:21:9-32
+31
+32    <queries>
+32-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:23:5-27:15
+33        <intent>
+33-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:9-26:18
+34            <action android:name="androidx.car.app.CarAppService" />
+34-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:25:13-69
+34-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:25:21-66
+35        </intent>
+36
+37        <provider
+37-->[androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:24:9-27:43
+38            android:name="androidx.car.app.connection.provider"
+38-->[androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:25:13-64
+39            android:authorities="androidx.car.app.connection" />
+39-->[androidx.car.app:app:1.4.0] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/5ec56976e50fdb7e842952bbe8031f89/transformed/app-1.4.0/AndroidManifest.xml:26:13-62
+40    </queries>
+41
+42    <permission
+42-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+43        android:name="com.example.obdreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+43-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+44        android:protectionLevel="signature" />
+44-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+45
+46    <uses-permission android:name="com.example.obdreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+46-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+46-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+47
+48    <application
+48-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:29:5-61:19
+49        android:name="com.example.obdreader.ObdReaderApp"
+49-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:30:9-37
+50        android:allowBackup="true"
+50-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:31:9-35
+51        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+51-->[androidx.core:core:1.13.1] /Users/stefanvitanov/.gradle/caches/8.10.2/transforms/733fe3212845847a9aad2854fb878ceb/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+52        android:debuggable="true"
+53        android:extractNativeLibs="false"
+54        android:label="@string/app_name"
+54-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:32:9-41
+55        android:supportsRtl="true"
+55-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:33:9-35
+56        android:testOnly="true"
+57        android:theme="@style/Theme.ObdReader" >
+57-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:34:9-47
+58        <meta-data
+58-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:36:9-38:59
+59            android:name="com.google.android.gms.car.application"
+59-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:37:13-66
+60            android:resource="@xml/automotive_app_desc" />
+60-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:38:13-56
+61        <meta-data
+61-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:39:9-41:33
+62            android:name="androidx.car.app.minCarApiLevel"
+62-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:40:13-59
+63            android:value="1" />
+63-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:41:13-30
+64
+65        <activity
+65-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:43:9-50:20
+66            android:name="com.example.obdreader.ui.MainActivity"
+66-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:44:13-44
+67            android:exported="true" >
+67-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:45:13-36
+68            <intent-filter>
+68-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:46:13-49:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:17-69
+69-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:47:25-66
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:48:17-77
+71-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:48:27-74
+72            </intent-filter>
+73        </activity>
+74
+75        <service
+75-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:52:9-60:19
+76            android:name="com.example.obdreader.car.ObdCarAppService"
+76-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:53:13-49
+77            android:exported="true" >
+77-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:54:13-36
 78            <intent-filter>
-78-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:55:13-58:29
+78-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:56:13-59:29
 79                <action android:name="androidx.car.app.CarAppService" />
-79-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:13-69
-79-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:24:21-66
+79-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:25:13-69
+79-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:25:21-66
 80
-81                <category android:name="androidx.car.app.category.IOT" />
-81-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:57:17-74
-81-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:57:27-71
+81                <category android:name="androidx.car.app.category.NAVIGATION" />
+81-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:58:17-81
+81-->/Users/stefanvitanov/repos/AndroidStudioProjects/obd-reader/app/src/main/AndroidManifest.xml:58:27-78
 82            </intent-filter>
 83        </service>
 84

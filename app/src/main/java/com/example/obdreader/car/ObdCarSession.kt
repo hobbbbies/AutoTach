@@ -5,5 +5,5 @@ import androidx.car.app.Screen
 import androidx.car.app.Session
 
 class ObdCarSession : Session() {
-    override fun onCreateScreen(intent: Intent): Screen = ObdCarScreen(carContext)
+    override fun onCreateScreen(intent: Intent): Screen = ObdNavCarScreen(carContext)
 }

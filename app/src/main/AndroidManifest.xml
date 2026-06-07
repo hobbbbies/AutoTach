@@ -14,6 +14,7 @@
         android:name="android.permission.BLUETOOTH_SCAN"
         android:usesPermissionFlags="neverForLocation" />
     <uses-permission android:name="androidx.car.app.ACCESS_SURFACE" />
+    <uses-permission android:name="androidx.car.app.NAVIGATION_TEMPLATES"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-feature
         android:name="android.hardware.bluetooth_le"
@@ -51,10 +52,10 @@
         <service
             android:name=".car.ObdCarAppService"
             android:exported="true"
-            android:foregroundServiceType="connectedDevice">
+            >
             <intent-filter>
                 <action android:name="androidx.car.app.CarAppService" />
-                <category android:name="androidx.car.app.category.IOT" />
+                <category android:name="androidx.car.app.category.NAVIGATION" />
             </intent-filter>
         </service>
     </application>
