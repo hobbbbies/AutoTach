@@ -41,8 +41,12 @@ class ObdRepository(
     val devices: StateFlow<Set<BluetoothDevice>> = scanner.devices
     val chosenDevice: StateFlow<BluetoothDevice?> = scanner.chosenDevice
 
-    private val _rpm = MutableStateFlow<Float?>(null)
-    val rpm: StateFlow<Float?> = _rpm.asStateFlow()
+    private val _rpm = MutableStateFlow<Int?>(null)
+    val rpm: StateFlow<Int?> = _rpm.asStateFlow()
+
+    private val _speed = MutableStateFlow<Int?>(null)
+    val speed: StateFlow<Int?> = _speed.asStateFlow()
+
 
     private val _connectionState = MutableStateFlow(ConnectionState.DISCONNECTED)
     val connectionState: StateFlow<ConnectionState> = _connectionState.asStateFlow()
@@ -95,7 +99,7 @@ class ObdRepository(
         scope.launch {
             obdReader?.state?.first { it == ConnectionState.READY }
             Log.i(TAG, "setChosenDevice: READY, starting RPM poller")
-            startPollingRpm()
+            startPolling()
         }
     }
 
@@ -103,16 +107,17 @@ class ObdRepository(
     fun disconnect() {
         setChosenDevice(null)
         stateMirrorJob?.cancel()
-        stopPollingRpm()
+        stopPolling()
         obdReader?.disconnect()
     }
 
-    fun startPollingRpm() {
+    fun startPolling() {
         pollJob?.cancel()
         pollJob = scope.launch {
             while (isActive) {
                 try {
                     _rpm.value = obdReader?.getRpm()
+                    _speed.value = obdReader?.getSpeed()
                 } catch (e: IOException) {
                     Log.w(TAG, "RPM read failed: ${e.message}")
                     _rpm.value = null
@@ -122,7 +127,7 @@ class ObdRepository(
         }
     }
 
-    fun stopPollingRpm() {
+    fun stopPolling() {
         pollJob?.cancel()
         pollJob = null
         _rpm.value = null

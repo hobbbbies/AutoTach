@@ -2,21 +2,15 @@ package com.example.obdreader.car
 
 import androidx.car.app.AppManager
 import androidx.car.app.CarContext
-import androidx.car.app.CarContext.NAVIGATION_SERVICE
 import androidx.car.app.Screen
 import androidx.car.app.model.Action
 import androidx.car.app.model.ActionStrip
-import androidx.car.app.model.CarText
-import androidx.car.app.model.Pane
-import androidx.car.app.model.PaneTemplate
-import androidx.car.app.model.Row
 import androidx.car.app.model.Template
 import androidx.car.app.navigation.model.NavigationTemplate
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.example.obdreader.ObdReaderApp
-import com.example.obdreader.bluetooth.ConnectionState
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 

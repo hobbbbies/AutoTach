@@ -7,10 +7,13 @@ import com.example.obdreader.interfaces.IObdReader
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlin.math.min
 
 private const val TAG = "MockObdReader"
 class MockObdReader(context: Context, device: BluetoothDevice) : IObdReader {
-    private var rpm: Float = 1000f
+    private var rpm: Int = 1000
+    private var speed: Int = 0
+
 
     private val _state = MutableStateFlow<ConnectionState>(ConnectionState.DISCONNECTED)
     override val state: StateFlow<ConnectionState> get() = _state.asStateFlow()
@@ -21,7 +24,7 @@ class MockObdReader(context: Context, device: BluetoothDevice) : IObdReader {
     }
 
     override fun disconnect() {
-        rpm = 1000f
+        rpm = 1000
         _state.value = ConnectionState.DISCONNECTED
     }
 
@@ -29,14 +32,18 @@ class MockObdReader(context: Context, device: BluetoothDevice) : IObdReader {
         return true
     }
 
-    override suspend fun getRpm(): Float {
-        val result = rpm
-        rpm += 100
-        return result
+    override suspend fun getRpm(): Int {
+        val currentRpm = rpm
+        val direction = arrayOf(-1, 2).random()
+        val nextTarget = currentRpm + (100 * direction)
+        rpm = nextTarget.coerceIn(0, 6000)
+        return currentRpm
     }
 
-    override suspend fun getSpeed(): Float {
-        return 100f
+    override suspend fun getSpeed(): Int {
+        val result = speed
+        speed += 1
+        return result
     }
 
 }

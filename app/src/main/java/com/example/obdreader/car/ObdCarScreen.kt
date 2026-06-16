@@ -34,7 +34,7 @@ class ObdCarScreen(carContext: CarContext) : Screen(carContext), DefaultLifecycl
         val rpm = repo.rpm.value
         val state = repo.connectionState.value
 
-        val rpmText = if (rpm != null) "${rpm.toInt()} rpm" else "-- rpm"
+        val rpmText = if (rpm != null) "$rpm rpm" else "-- rpm"
         val statusText = when (state) {
             ConnectionState.DISCONNECTED -> "Connect on phone"
             ConnectionState.CONNECTING -> "Connecting…"

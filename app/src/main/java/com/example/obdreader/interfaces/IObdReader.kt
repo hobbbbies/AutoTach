@@ -12,7 +12,7 @@ interface IObdReader {
 
     fun isConnected(): Boolean
 
-    suspend fun getRpm(): Float
+    suspend fun getRpm(): Int
 
-    suspend fun getSpeed(): Float
+    suspend fun getSpeed(): Int
 }

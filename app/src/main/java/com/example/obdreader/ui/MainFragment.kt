@@ -40,7 +40,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.rpm.collect { rpm ->
-                    tvRpm.text = if (rpm == null) "-- rpm" else "${rpm.toInt()} rpm"
+                    tvRpm.text = if (rpm == null) "-- rpm" else "$rpm rpm"
                 }
             }
         }

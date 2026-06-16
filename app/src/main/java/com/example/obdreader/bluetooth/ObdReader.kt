@@ -48,16 +48,16 @@ class ObdReader(context: Context, device: BluetoothDevice) : IObdReader {
 
     override fun isConnected(): Boolean = communicator.isConnected()
 
-    override suspend fun getRpm(): Float {
+    override suspend fun getRpm(): Int {
         val bytes = queryBytes("010C", minBytes = 4)
         val a = bytes[2].toInt() and 0xFF
         val b = bytes[3].toInt() and 0xFF
-        return ((a * 256) + b) / 4f
+        return (((a * 256) + b) / 4f).toInt()
     }
 
-    override suspend fun getSpeed(): Float {
+    override suspend fun getSpeed(): Int {
         val bytes = queryBytes("010D", minBytes = 3)
-        return (bytes[2].toInt() and 0xFF).toFloat()
+        return (bytes[2].toInt() and 0xFF)
     }
 
     private suspend fun queryBytes(cmd: String, minBytes: Int): ByteArray {
