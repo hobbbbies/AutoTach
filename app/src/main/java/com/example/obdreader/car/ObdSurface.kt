@@ -130,9 +130,19 @@ class ObdSurface(private val carContext: CarContext, private val repository: Obd
         val litCount = (pct * segmentCount).toInt().coerceIn(0, segmentCount)
         for (i in 0 until segmentCount) {
             val left = x + i * (segW + segmentGap)
-            val paint = if (i < litCount) barPaint else barTrackPaint
+            val paint = if (i < litCount) {
+                barPaint.apply { color = segmentColor(i.toFloat() / (segmentCount - 1)) }
+            } else {
+                barTrackPaint
+            }
             canvas.drawRect(left, y, left + segW, y + h, paint)
         }
+    }
+
+    private fun segmentColor(pct: Float): Int {
+        val shifted = (pct + 2f / (segmentCount - 1)).coerceAtMost(1f)
+        val hue = 120f * (1f - shifted)                // 120 green -> 0 red, shifted 2 segs toward red
+        return Color.HSVToColor(floatArrayOf(hue, 1f, 0.9f))
     }
 
     private fun drawHeaderText(canvas: Canvas, text: String, x: Float, y: Float) {
@@ -190,12 +200,7 @@ class ObdSurface(private val carContext: CarContext, private val repository: Obd
         }
     }
 
-    private fun bgFor(rpm: Int?): Int {
-        if (rpm == null) return 0xFF202124.toInt()
-        val shiftedRpms = (((rpm) * 255) / 6000).and(0xFF).shl(16)
-        Log.i("TAG", "bgFor: Byef world")
-        return 0xFF1B5E20.toInt() + shiftedRpms
-    }
+    private fun bgFor(rpm: Int?): Int = 0xFF202124.toInt()
 
 //    private fun bgFor(rpm: Int?): Int = when {
 //        rpm == null  -> 0xFF202124.toInt()
