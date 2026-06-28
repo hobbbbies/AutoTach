@@ -50,27 +50,6 @@ The Android BLE API is **callback-based and strictly serial** — you can only h
 
 ---
 
-## The Protocol Stack
-
-What makes this project interesting from a learning perspective is that it sits on three protocols stacked on top of each other, and the code makes that stack visible:
-
-| Layer | Format | What gets parsed |
-|---|---|---|
-| **BLE GATT** | binary characteristic writes / notifies | bytes of an ASCII stream |
-| **ELM327** | CR-terminated AT commands, `>` prompt as response terminator | one full response string per command |
-| **OBD-II** | hex ASCII representing CAN frames, optionally ISO-TP framed | typed values (RPM as `Float`, speed as `Float`) |
-
-The most involved piece is `ObdReader.parseResponse`, which has to:
-1. Split the response on `\r` and drop blanks, echoes of the command, and `SEARCHING...` filler lines.
-2. Match against the 9 documented ELM327 error literals and the `BUS INIT:` prefix.
-3. Detect whether the response is single-frame or **ISO-TP multi-frame** (a length header on the first line, `N:` prefixes on subsequent lines).
-4. For multi-frame: read the declared length, strip frame numbers, concatenate, and truncate trailing padding.
-5. Convert the hex string to a `ByteArray`, validating odd length and non-hex characters.
-
-Only after all that does the domain code apply the per-PID formula (e.g. RPM = `((A * 256) + B) / 4`).
-
----
-
 ## Tech Stack
 
 - **Language:** Kotlin
