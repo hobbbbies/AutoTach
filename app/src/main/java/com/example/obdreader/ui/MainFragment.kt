@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresPermission
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -33,13 +34,13 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         }
 
         btnPair.setOnClickListener {
-
+            viewModel.connect()
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.rpm.collect { rpm ->
-                    tvRpm.text = if (rpm == null) "-- rpm" else "${rpm.toInt()} rpm"
+                    tvRpm.text = if (rpm == null) "-- rpm" else "$rpm rpm"
                 }
             }
         }
@@ -49,8 +50,15 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 viewModel.chosenDevice.collect { device ->
                     if (device != null) {
                         Log.i(TAG, "Device chosen: ${device.name ?: device.address}")
-                        tvTitle?.text = device.name
+                        tvTitle?.text = device.name ?: "Unknown Device"
                     }
+                }
+            }
+        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.errors.collect { msg ->
+                    Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
                 }
             }
         }

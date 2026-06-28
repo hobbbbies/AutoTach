@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color Primary
 drawable bg_row_item
+drawable dashboard_bg
 id btnConnect
 id btnPair
 id host
@@ -18,3 +19,4 @@ string discovered_device
 string hello_world
 string pair_text
 style Theme.ObdReader
+xml automotive_app_desc

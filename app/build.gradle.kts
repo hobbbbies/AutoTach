@@ -16,7 +16,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("boolean", "MOCK_BLUETOOTH", "true")
+        }
         release {
+            buildConfigField("boolean", "MOCK_BLUETOOTH", "true")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -36,6 +40,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -49,4 +54,5 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
     implementation("androidx.fragment:fragment-ktx:1.8.9")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.car.app:app:1.4.0")
 }

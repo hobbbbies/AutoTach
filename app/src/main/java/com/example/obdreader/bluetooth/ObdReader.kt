@@ -8,6 +8,7 @@ import androidx.annotation.RequiresPermission
 import com.example.obdreader.interfaces.IObdReader
 import kotlinx.coroutines.flow.StateFlow
 import java.io.IOException
+import com.example.obdreader.BuildConfig
 
 private const val TAG = "ObdReader"
 
@@ -35,26 +36,28 @@ class ObdReader(context: Context, device: BluetoothDevice) : IObdReader {
 
     private val communicator = BluetoothCommunicator(context, device)
 
-    val state: StateFlow<ConnectionState> get() = communicator.state
+    override val state: StateFlow<ConnectionState> get() = communicator.state
 
     @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
-    override fun connect() = communicator.connect()
+    override fun connect() {
+        communicator.connect()
+    }
 
     @RequiresPermission(Manifest.permission.BLUETOOTH_CONNECT)
     override fun disconnect() = communicator.disconnect()
 
     override fun isConnected(): Boolean = communicator.isConnected()
 
-    override suspend fun getRpm(): Float {
+    override suspend fun getRpm(): Int {
         val bytes = queryBytes("010C", minBytes = 4)
         val a = bytes[2].toInt() and 0xFF
         val b = bytes[3].toInt() and 0xFF
-        return ((a * 256) + b) / 4f
+        return (((a * 256) + b) / 4f).toInt()
     }
 
-    override suspend fun getSpeed(): Float {
+    override suspend fun getSpeed(): Int {
         val bytes = queryBytes("010D", minBytes = 3)
-        return (bytes[2].toInt() and 0xFF).toFloat()
+        return (bytes[2].toInt() and 0xFF)
     }
 
     private suspend fun queryBytes(cmd: String, minBytes: Int): ByteArray {
