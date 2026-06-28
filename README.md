@@ -4,6 +4,12 @@
 
 Built and tested against the **Carista EVO** adapter (ELM327 v2.2 compatible), but the parser is generic and works with any standards-compliant ELM327 device.
 
+--- 
+## Demonstration
+
+
+https://github.com/user-attachments/assets/5d28f9d3-4caa-4ae7-ab0d-93bda1850c8a
+
 ---
 
 ## Features
