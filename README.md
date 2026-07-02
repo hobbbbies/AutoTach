@@ -42,15 +42,12 @@ Phone UI ──── observes ────────────────�
 
 ## Concurrency
 
-Concurrency was a big consideration when developing this application, as I knew there would be a lot of background processes (OBD communication and polling, as well as lots of state to be read throughout the project), I knew I
-'d need a heavy focus on an asynchronous architecture to avoid major performance hits. Kotlin coroutines were my primary way of doing this.  
+Between the Bluetooth connection, the PID-polling loop, and two UIs that redraw on every state change, there's a lot going on off the main thread. Kotlin coroutines and `StateFlow` are what keep it coordinated.
 
-**Key points:**
-- 
-- `sendCommand` is a `suspend` function. It writes the command on the GATT thread and then `await`s the response from a `Channel<String>` that the notification callback feeds.
-- Notification chunks are buffered until the ELM327's `>` prompt is seen, at which point the full response is dispatched as a single message — turning the chunked async stream into a clean request/response API.
-- `BluetoothCommunicator` owns its own `CoroutineScope(Dispatchers.IO + SupervisorJob())` for the handshake. The ViewModel owns its own `viewModelScope` for UI-driven polling. Cancelling one doesn't poison the other.
-- Connection progress and live RPM are exposed as `StateFlow`s, so both the phone UI and the Android Auto `Screen` can render reactively without polling — the head unit redraws automatically whenever a fresh PID response lands.
+- **`StateFlow` as the source of truth** — RPM, speed, connection status, and the device list are all `StateFlow`s. New subscribers immediately get the latest value.
+- **`repeatOnLifecycle(STARTED)`** on the phone side, so Fragment collectors pause with the view and never leak past it.
+- **`suspend fun sendCommand`** wraps the callback-based BLE GATT API in a linear one — the caller writes `val response = sendCommand("010C")` and awaits the parsed response
+- **ELM327 init handshake as a coroutine** — after notifications are enabled, `scope.launch { performHandshake() }` sends the 7-command init sequence (`ATZ`, `ATE0`, `ATL0`, …) one after another using `sendCommand`, so a serial protocol reads as a top-to-bottom loop instead of a callback chain.
 
 ---
 
